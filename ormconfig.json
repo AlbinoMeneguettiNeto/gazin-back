@@ -1,0 +1,30 @@
+[
+  {
+    "name": "default",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "Postgres2019!",
+    "database": "gazin-back",
+    "entities": ["./src/models/*.ts"],
+    "migrations": ["./src/config/database/migrations/*.ts"],
+    "cli": {
+      "migrationsDir": "./src/config/database/migrations"
+    }
+  },
+  {
+    "name": "test",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "Postgres2019!",
+    "database": "gazin-test",
+    "entities": ["./src/models/*.ts"],
+    "migrations": ["./src/config/database/migrations/*.ts"],
+    "cli": {
+      "migrationsDir": "./src/config/database/migrations"
+    }
+  }
+]
