@@ -3,6 +3,9 @@ Para rodar, precisará rodar as migrations antes, para rodar use o comando:
 
 `npx ts-node ./node_modules/.bin/typeorm migration:run`
 
+Obs:
+É necessário que o banco de dados já exista com o nome que está na ormconfig.json.
+
 # Rotas:
 __GET__ `/api/developers`
 

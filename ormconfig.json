@@ -2,7 +2,7 @@
   {
     "name": "default",
     "type": "postgres",
-    "host": "localhost",
+    "host": "app-db",
     "port": 5432,
     "username": "postgres",
     "password": "Postgres2019!",
@@ -16,7 +16,7 @@
   {
     "name": "test",
     "type": "postgres",
-    "host": "localhost",
+    "host": "app-db",
     "port": 5432,
     "username": "postgres",
     "password": "Postgres2019!",

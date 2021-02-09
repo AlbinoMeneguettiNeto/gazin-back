@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc --project ./",
     "start": "node dist/server.js",
-    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify src/app.ts",
+    "predev": "npx ts-node ./node_modules/.bin/typeorm migration:run",
+    "dev": "npm run predev && ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify src/app.ts",
     "test": "jest"
   },
   "devDependencies": {
