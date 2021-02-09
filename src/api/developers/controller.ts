@@ -8,7 +8,7 @@ import DeleteDeveloper from "@api/developers/services/deleteDeveloper";
 
 class DeveloperController {
   static async index(request: Request, response: Response): Promise<Response> {
-    if (request.query) {
+    if (JSON.stringify(request.query) !== JSON.stringify({})) {
       const { page, limit, keyword } = request.query;
       try {
         const paginate = await GetDeveloperPaginate.execute(
@@ -89,7 +89,7 @@ class DeveloperController {
 
       return response.status(204).send();
     } catch (error) {
-      return response.status(400).json({Error: 'Couldn\'t delete user'});
+      return response.status(400).json({ Error: "Couldn't delete user" });
     }
   }
 }
